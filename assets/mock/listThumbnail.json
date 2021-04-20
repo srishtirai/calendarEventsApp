@@ -1,0 +1,10 @@
+{
+	"returnValue": true,
+	"requestId": "request4",
+	"thumbnails": [
+		"http:\/\/placehold.it\/308x236&text=Thumbnail+Image"
+	],
+	"xthumbnails": [
+		"\/tmp\/tnm\/jpegtest3.jpg"
+	]
+}
