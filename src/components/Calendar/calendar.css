@@ -172,7 +172,8 @@ td {
 }
 
 .photo-list{
-  height:120px;
+  height:130px;
+  padding: auto;
 }
 
 .create-new-btn {

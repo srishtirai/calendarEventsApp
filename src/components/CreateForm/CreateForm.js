@@ -8,14 +8,18 @@ import ri from '@enact/ui/resolution';
 import VirtualGridList from '@enact/ui/VirtualList';
 import ImageItem from '@enact/ui/ImageItem';
 import {getImageList} from '../../actions/imageActions';
+import './createForm.css';
 require.context('../../../assets/samplePhoto/', false, /\.jpg$/);
 
 const CreateForm = ({getListImage, imageList, currentSelectedDate, postObj, triggerNotification})=> {
     
     useEffect(() => {
 		getListImage();
+		for (var x in imageList.results){
+			imageList.results[x].selected= false;
+		}
 	}, []);
-
+	
     const [datePickerVal, setdatePickerVal] = useState(currentSelectedDate);
     const [eventTitle, seteventTitle] = useState(null);
     const [eventDesc, seteventDesc] = useState(null);
@@ -31,7 +35,20 @@ const CreateForm = ({getListImage, imageList, currentSelectedDate, postObj, trig
     	seteventDesc(desc.value);
     };
     const onSelectImage = (index) => {
-        setpickedImage(imageList.results[index]);
+		console.log("pickedImage "+pickedImage);
+		console.log("index "+index);
+		if(pickedImage != null){
+			imageList.results[pickedImage].selected = false;
+			if(pickedImage == index) setpickedImage(null);
+			else{
+				setpickedImage(index);
+				imageList.results[index].selected = true;
+			}	
+		}
+		else{
+			setpickedImage(index);
+			imageList.results[index].selected = true;
+		}
     };
 
     const onButtonSubmit = () => {
@@ -46,9 +63,11 @@ const CreateForm = ({getListImage, imageList, currentSelectedDate, postObj, trig
     				'title' : eventTitle,
     				'description' : eventDesc
     			};
-                obj['image'] = pickedImage;
-    			console.log(obj);
-    			postObj(obj);
+				if(pickedImage){
+					obj['image'] = imageList.results[pickedImage];
+				}
+				console.log(obj);
+				postObj(obj);
     		} else {
     			triggerNotification({message: 'Event Description is Mandatory'});
     		}
@@ -57,11 +76,14 @@ const CreateForm = ({getListImage, imageList, currentSelectedDate, postObj, trig
     	}
     };
 
+
     const renderItem = ({index}) => {
+		let image_list_item = imageList.results[index].selected ? "with-border" :  "no-border" ;
     	return (
     		<ImageItem
+				className={image_list_item}
 		        src={imageList.results[index].file_path}
-    			onClick={() => onSelectImage(index)}
+				onClick={() => onSelectImage(index)}
 	        />
     	);
     };
@@ -89,7 +111,7 @@ const CreateForm = ({getListImage, imageList, currentSelectedDate, postObj, trig
     				horizontalScrollbar="visible"
     				direction="horizontal"
     				clientSize={{
-    					clientWidth: ri.scale(600),
+    					clientWidth: ri.scale(1300),
     					clientHeight: ri.scale(120)
     				}}
     				itemSize={{

@@ -288,8 +288,8 @@ export default class Calendar extends Component {
     									currentSelectedDate={currentSelectedDate}
     									postObj={this.postObj}
     									triggerNotification={this.triggerNotification}
-	/>                                :
-	<EventsList
+									/> :
+									<EventsList
     									createNewEvent={this.createNewEvent}
     									events={this.state.monthsData[currentYear][currentMonth.toString()][currentDate]}
     								/>

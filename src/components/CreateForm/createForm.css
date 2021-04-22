@@ -1,0 +1,9 @@
+.no-border {
+    border: solid 2px transparent;
+    padding: 4px 4px 4px 4px; 
+    margin: 0px 0px 10px 0;
+}
+.with-border {
+    border: solid 7px #f93881;
+    margin: 0px 0px 10px 0;
+}
