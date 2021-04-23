@@ -33,6 +33,7 @@ export const generateQuery = {
 			let temp = {};
 			temp['title'] = arr[i]['event']['title'];
 			temp['description'] = arr[i]['event']['description'];
+			temp['image'] = arr[i]['image'];
 
 			filteredData[arr[i].year][arr[i].month][arr[i].date].push(temp);
 		}

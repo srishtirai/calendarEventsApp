@@ -4,27 +4,50 @@ import moment from 'moment';
 import Button from '@enact/moonstone/Button';
 import DatePicker from '@enact/moonstone/DatePicker';
 import Input from '@enact/moonstone/Input';
-import ri from '@enact/ui/resolution';
-import VirtualGridList from '@enact/ui/VirtualList';
 import ImageItem from '@enact/ui/ImageItem';
 import {getImageList} from '../../actions/imageActions';
+import {getDeviceList} from '../../actions/deviceActions';
 import './createForm.css';
+import deviceListReducer from '../../reducers/deviceReducer';
+import ImageSelection from './ImageSelection';
 require.context('../../../assets/samplePhoto/', false, /\.jpg$/);
 
-const CreateForm = ({getListImage, imageList, currentSelectedDate, postObj, triggerNotification})=> {
+const CreateForm = ({getListDevice, getListImage, imageList, deviceList, currentSelectedDate, postObj, triggerNotification})=> {
     
     useEffect(() => {
-		getListImage();
-		for (var x in imageList.results){
-			imageList.results[x].selected= false;
-		}
+		getListDevice();
+		getListImage("DefaultImages");
 	}, []);
 	
     const [datePickerVal, setdatePickerVal] = useState(currentSelectedDate);
     const [eventTitle, seteventTitle] = useState(null);
     const [eventDesc, seteventDesc] = useState(null);
     const [pickedImage, setpickedImage] = useState(null);
+	let deviceInfo = [];
 
+	const getDevices =() =>{
+		let list=[];
+		list.push("Default Images");
+		deviceInfo.push( {
+			"name": "Default Images",
+			"uri": "DefaultImages"
+		 });
+		deviceList.map((device) => {
+			if(device.deviceList.length > 0){
+				device.deviceList.map((deviceList, index) => {
+					deviceInfo.push(deviceList);
+					list.push(deviceList.name);
+				})
+			}
+		})
+		return list;
+	}
+	let devices= getDevices();
+
+	const getDeviceImageList = (e) =>{
+		const uri = deviceInfo[e].uri;
+		getListImage(uri);
+	}
     const onDatePickerChange = (date) => {
     	setdatePickerVal(date.value);
     };
@@ -35,8 +58,6 @@ const CreateForm = ({getListImage, imageList, currentSelectedDate, postObj, trig
     	seteventDesc(desc.value);
     };
     const onSelectImage = (index) => {
-		console.log("pickedImage "+pickedImage);
-		console.log("index "+index);
 		if(pickedImage != null){
 			imageList.results[pickedImage].selected = false;
 			if(pickedImage == index) setpickedImage(null);
@@ -66,6 +87,9 @@ const CreateForm = ({getListImage, imageList, currentSelectedDate, postObj, trig
 				if(pickedImage){
 					obj['image'] = imageList.results[pickedImage];
 				}
+				else{
+					obj['image'] = {};
+				}
 				console.log(obj);
 				postObj(obj);
     		} else {
@@ -75,7 +99,6 @@ const CreateForm = ({getListImage, imageList, currentSelectedDate, postObj, trig
     		triggerNotification({message: 'Event Title is Mandatory'});
     	}
     };
-
 
     const renderItem = ({index}) => {
 		let image_list_item = imageList.results[index].selected ? "with-border" :  "no-border" ;
@@ -101,39 +124,29 @@ const CreateForm = ({getListImage, imageList, currentSelectedDate, postObj, trig
     			<div className="event-input">
     				<Input className="event-input-internal" placeholder="Description of Event Here" onChange={onEventDescChange} value={eventDesc} />
 	            </div>
-    			<div>
-    				<label>Pick an Image</label>
-	            </div>
-    			<VirtualGridList
-    				className="photo-list"
-    				itemRenderer={renderItem}
-    				dataSize={imageList.count}
-    				horizontalScrollbar="visible"
-    				direction="horizontal"
-    				clientSize={{
-    					clientWidth: ri.scale(1300),
-    					clientHeight: ri.scale(120)
-    				}}
-    				itemSize={{
-    					minWidth: ri.scale(100),
-    					minHeight: ri.scale(100)
-    				}}
-    				spacing={ri.scale(20)}
-	            />
+    			<ImageSelection 
+				 renderItem={renderItem} imageList={imageList} devices={devices} getImageList={getDeviceImageList}
+				 />
     			<Button onClick={onButtonSubmit}>Create Event</Button>
 	</>
     	);
     }
 
-const mapStateToProps = ({image}) => {
+const mapStateToProps = ({device, image}) => {
 	return {
-		imageList: image.imageList
+		imageList: image.imageList,
+		deviceList: device.deviceList
 	};
 };
 
 const mapDispatchToState = dispatch => {
 	return {
-		getListImage: () => dispatch(getImageList())
+		getListDevice: () => dispatch(getDeviceList({
+			subscribe: true
+		})),
+		getListImage: (uri) => dispatch(getImageList({
+			uri: uri
+		})),
 	};
 };
 

@@ -4,13 +4,15 @@
       "3": [
         {
           "title": "Some one birthday",
-          "description": "Mr. abc's birthday on this day"
+          "description": "Mr. abc's birthday on this day",
+          "image":  {}
         }
       ],
       "14": [
         {
           "title": "Valentines Day",
-          "description": "Its a valentines Day today"
+          "description": "Its a valentines Day today",
+          "image":  {}
         }
       ]
     },
@@ -18,17 +20,20 @@
       "11": [
         {
           "title": "Maha Shivaratri",
-          "description": "Its a Festival day, plan for temple visit"
+          "description": "Its a Festival day, plan for temple visit",
+          "image":  {}
         }
       ],
       "28": [
         {
           "title": "My birthday",
-          "description": "My birthday today, plan to celebrate it"
+          "description": "My birthday today, plan to celebrate it",
+          "image":  {}
         },
         {
           "title": "Birthday Event",
-          "description": "Attend birthday celebration at Office at 3PM"
+          "description": "Attend birthday celebration at Office at 3PM",
+          "image":  {}
         }
       ]
     },
@@ -36,17 +41,43 @@
       "2": [
         {
           "title": "Good Friday",
-          "description": "Its a Friday and good friday and long holiday"
+          "description": "Its a Friday and good friday and long holiday",
+          "image":  {}
         }
       ],
       "28": [
         {
+          "title": "Good Friday",
+          "description": "Its a Friday and good friday and long holiday",
+          "image":  {}
+        },
+        {
           "title": "My birthday",
-          "description": "My birthday today, plan to celebrate it"
+          "description": "My birthday today, plan to celebrate it",
+          "image":  {
+            "width": 1024,
+            "last_modified_date": "Wed Jul 22 09:04:16 2020 GMT",
+            "uri": "msc://D94A-BE4D/tmp/usb/sdh/sdh1/SampleImage2.jpg",
+            "title": "SampleImage2",
+            "file_size": 199429,
+            "height": 768,
+            "file_path": "..\/..\/..\/assets\/samplePhoto\/Irises.jpg"
+         }
         },
         {
           "title": "Birthday Event",
-          "description": "Attend birthday celebration at Office at 3PM"
+          "description": "Attend birthday celebration at Office at 3PM",
+          "image":  {}
+        },
+        {
+          "title": "Maha Shivaratri",
+          "description": "Its a Festival day, plan for temple visit",
+          "image":  {}
+        },
+        {
+          "title": "Some one birthday",
+          "description": "Mr. abc's birthday on this day",
+          "image":  {}
         }
       ]
     }

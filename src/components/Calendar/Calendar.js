@@ -44,6 +44,8 @@ export default class Calendar extends Component {
     			this.getDataFromDb();
     		}
     	});
+		// let monthsData = sampleData;
+		// this.setState({monthsData});
     }
 
     getDataFromDb = () => {
@@ -122,7 +124,6 @@ export default class Calendar extends Component {
     onSelectChange = (data) => {
     	this.setMonth(data.data);
     	this.props.onMonthChange && this.props.onMonthChange();
-
     };
 
     SelectList = (props) => {
@@ -249,12 +250,12 @@ export default class Calendar extends Component {
     						year={this.year}
     						onYearChange={this.onYearChange}
     						nextMonth={this.nextMonth}
-	/>
-	</thead>
+						/>
+					</thead>
     				<tbody>
     					<tr className="week-day-nav">
     						{weekdays}
-	</tr>
+						</tr>
     					<Days
     						firstDayOfMonth={this.firstDayOfMonth}
     						daysInMonth={this.daysInMonth}

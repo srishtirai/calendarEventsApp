@@ -1,0 +1,17 @@
+.event{
+    padding: 10px 0px 0px 0px;
+}
+.event-body{
+    padding: 10px 10px 10px 30px;
+}
+img{
+    float:left;
+    border: 5px solid #f93881;
+    border-radius: 4px;
+    width: 100px;
+    height: 100px;
+}
+.event-desc{
+    padding-left: 20px;
+    display:inline-block;
+}
