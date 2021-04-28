@@ -7,3 +7,12 @@
     border: solid 7px #f93881;
     margin: 0px 0px 10px 0;
 }
+.image-heading{
+    font-size: 30px;
+    font-weight: normal;
+    padding: 10px 10px 20px 10px;
+}
+.source-label{
+    padding: 20px;
+    font-size: 25px;
+}

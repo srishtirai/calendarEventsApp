@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ri from '@enact/ui/resolution';
 import Dropdown from '@enact/moonstone/Dropdown';
 import VirtualGridList from '@enact/ui/VirtualList';
+import './createForm.css';
 
 const ImageSelection = (props) => {
 
@@ -9,13 +10,13 @@ const ImageSelection = (props) => {
     return(
         <>
     <div>
-    				<label>Pick an Image</label>
+    				<label className="image-heading">Pick an Image</label>
 	            </div>
 				<div>
-    				<label>Choose Source</label>
+    				<label className="source-label">Choose Source</label>
 								<Dropdown
 								selected={selectedDecice}
-								width="tiny"
+								width="large"
 								onSelect={(d) => {
 									setSelectedDevice(d.selected);
                                     props.getImageList(d.selected);
