@@ -8,8 +8,9 @@ import ImageItem from '@enact/ui/ImageItem';
 import {getImageList} from '../../actions/imageActions';
 import {getDeviceList} from '../../actions/deviceActions';
 import './createForm.css';
-import deviceListReducer from '../../reducers/deviceReducer';
+// import deviceListReducer from '../../reducers/deviceReducer';
 import ImageSelection from './ImageSelection';
+// import placeholder from '../../../assets/samplePhoto/Austria Hallstatt.jpg';
 require.context('../../../assets/samplePhoto/', false, /\.jpg$/);
 
 const CreateForm = ({getListDevice, getListImage, imageList, deviceList, currentSelectedDate, postObj, triggerNotification})=> {
@@ -104,6 +105,7 @@ const CreateForm = ({getListDevice, getListImage, imageList, deviceList, current
 		let image_list_item = imageList.results[index].selected ? "with-border" :  "no-border" ;
     	return (
     		<ImageItem
+				// placeholder={placeholder}
 				className={image_list_item}
 		        src={imageList.results[index].file_path}
 				onClick={() => onSelectImage(index)}

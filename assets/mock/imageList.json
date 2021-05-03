@@ -8,7 +8,7 @@
             "title": "SampleImage1",
             "file_size": 197377,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Austria Hallstatt.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets/samplePhoto/Almond%20Blossoms.jpg"
          },
          {
             "width": 1024,
@@ -17,7 +17,7 @@
             "title": "SampleImage2",
             "file_size": 199429,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Almond Blossoms.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Almond Blossoms.jpg"
          },
          {
             "width": 1024,
@@ -26,7 +26,7 @@
             "title": "SampleImage1",
             "file_size": 197377,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Slovenia Bled.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Slovenia Bled.jpg"
          },
          {
             "width": 1024,
@@ -35,7 +35,7 @@
             "title": "SampleImage2",
             "file_size": 199429,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Pine Trees in Fog.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Pine Trees in Fog.jpg"
          },
          {
             "width": 1024,
@@ -44,7 +44,7 @@
             "title": "SampleImage1",
             "file_size": 197377,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Dresden From the Right Bank of the Elbe Below the Augustus Bridge.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Dresden From the Right Bank of the Elbe Below the Augustus Bridge.jpg"
          },
          {
             "width": 1024,
@@ -53,7 +53,7 @@
             "title": "SampleImage2",
             "file_size": 199429,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Irises.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Irises.jpg"
          },
          {
             "width": 1024,
@@ -62,7 +62,7 @@
             "title": "SampleImage1",
             "file_size": 197377,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Austria Hallstatt.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Austria Hallstatt.jpg"
          },
          {
             "width": 1024,
@@ -71,7 +71,7 @@
             "title": "SampleImage2",
             "file_size": 199429,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Almond Blossoms.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Almond Blossoms.jpg"
          },
          {
             "width": 1024,
@@ -80,7 +80,7 @@
             "title": "SampleImage1",
             "file_size": 197377,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Slovenia Bled.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Slovenia Bled.jpg"
          },
          {
             "width": 1024,
@@ -89,7 +89,7 @@
             "title": "SampleImage2",
             "file_size": 199429,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Pine Trees in Fog.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Pine Trees in Fog.jpg"
          },
          {
             "width": 1024,
@@ -98,7 +98,7 @@
             "title": "SampleImage1",
             "file_size": 197377,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Dresden From the Right Bank of the Elbe Below the Augustus Bridge.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Dresden From the Right Bank of the Elbe Below the Augustus Bridge.jpg"
          },
          {
             "width": 1024,
@@ -107,7 +107,7 @@
             "title": "SampleImage2",
             "file_size": 199429,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Irises.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Irises.jpg"
          },
          {
             "width": 1024,
@@ -116,7 +116,7 @@
             "title": "SampleImage1",
             "file_size": 197377,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Austria Hallstatt.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Austria Hallstatt.jpg"
          },
          {
             "width": 1024,
@@ -125,7 +125,7 @@
             "title": "SampleImage2",
             "file_size": 199429,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Almond Blossoms.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Almond Blossoms.jpg"
          },
          {
             "width": 1024,
@@ -134,7 +134,7 @@
             "title": "SampleImage1",
             "file_size": 197377,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Slovenia Bled.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Slovenia Bled.jpg"
          },
          {
             "width": 1024,
@@ -143,7 +143,7 @@
             "title": "SampleImage2",
             "file_size": 199429,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Pine Trees in Fog.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Pine Trees in Fog.jpg"
          },
          {
             "width": 1024,
@@ -152,7 +152,7 @@
             "title": "SampleImage1",
             "file_size": 197377,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Dresden From the Right Bank of the Elbe Below the Augustus Bridge.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Dresden From the Right Bank of the Elbe Below the Augustus Bridge.jpg"
          },
          {
             "width": 1024,
@@ -161,7 +161,7 @@
             "title": "SampleImage2",
             "file_size": 199429,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Irises.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Irises.jpg"
          },
          {
             "width": 1024,
@@ -170,7 +170,7 @@
             "title": "SampleImage1",
             "file_size": 197377,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Austria Hallstatt.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Austria Hallstatt.jpg"
          },
          {
             "width": 1024,
@@ -179,7 +179,7 @@
             "title": "SampleImage2",
             "file_size": 199429,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Almond Blossoms.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Almond Blossoms.jpg"
          },
          {
             "width": 1024,
@@ -188,7 +188,7 @@
             "title": "SampleImage1",
             "file_size": 197377,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Slovenia Bled.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Slovenia Bled.jpg"
          },
          {
             "width": 1024,
@@ -197,7 +197,7 @@
             "title": "SampleImage2",
             "file_size": 199429,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Pine Trees in Fog.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Pine Trees in Fog.jpg"
          },
          {
             "width": 1024,
@@ -206,7 +206,7 @@
             "title": "SampleImage1",
             "file_size": 197377,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Dresden From the Right Bank of the Elbe Below the Augustus Bridge.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Dresden From the Right Bank of the Elbe Below the Augustus Bridge.jpg"
          },
          {
             "width": 1024,
@@ -215,7 +215,7 @@
             "title": "SampleImage2",
             "file_size": 199429,
             "height": 768,
-            "file_path": "..\/..\/..\/assets\/samplePhoto\/Irises.jpg"
+            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Irises.jpg"
          }
       ],
        "count": 24

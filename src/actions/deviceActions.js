@@ -1,6 +1,6 @@
 import {types} from './types';
 import LS2Request from '@enact/webos/LS2Request';
-import mockDeviceList from '../../assets/mock/deviceList.json';
+// import mockDeviceList from '../../assets/mock/deviceList.json';
 
 const getDeviceListRequest = () => {
 	return {
@@ -23,14 +23,14 @@ const setDeviceListError = (errMessage) => {
 };
 
 const getDeviceList = ({subscribe}) => (dispatch) => {
-	if (typeof window === 'object' && !window.PalmSystem) {
-		dispatch(setDeviceListSuccess(mockDeviceList.pluginList));
-		return{};
-	}
+	// if (typeof window === 'object' && !window.PalmSystem) {
+	// 	dispatch(setDeviceListSuccess(mockDeviceList.pluginList));
+	// 	return{};
+	// }
 	dispatch(getDeviceListRequest());
 		return new LS2Request().send({
 			service: 'luna://com.webos.service.mediaindexer/',
-			method: 'getImageList',
+			method: 'getDeviceList',
 			parameters: {
 				subscribe: subscribe
 			},
