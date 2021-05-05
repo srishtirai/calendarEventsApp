@@ -1,4 +1,4 @@
-const _kind = 'com.domain.app.service.familyeventplanner:1';
+const _kind = 'com.domain.app.service.familyeventplanner:4';
 export const generateQuery = {
 	findQuery : (obj) => {
 		let query = {

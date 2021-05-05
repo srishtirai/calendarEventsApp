@@ -6,7 +6,7 @@ export const dbServices = {
 			service: 'luna://com.webos.service.db',
 			method: 'putKind',
 			parameters: {
-				'id':'com.domain.app.service.familyeventplanner:1',
+				'id':'com.domain.app.service.familyeventplanner:4',
 				'owner':'com.domain.app.familyeventplanner',
 				'indexes':[
 					{'name':'year', 'props':[{'name':'year'}]},
@@ -58,6 +58,21 @@ export const dbServices = {
 			onFailure: (res) => {
 				console.log('Failed response :: ', res);
 				cb(res);
+			}
+		});
+	},
+	deleteEvent: (id) =>{
+		return new LS2Request().send({
+			service: 'luna://com.webos.service.db',
+			method: 'del',
+			parameters: {
+			'ids' : [id]
+			},
+			onSuccess: (res) => {
+				console.log('Success response :: ', res);
+			},
+			onFailure: (res) => {
+				console.log('Failed response :: ', res);
 			}
 		});
 	}

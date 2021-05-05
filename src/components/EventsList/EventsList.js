@@ -1,7 +1,7 @@
 import React from 'react';
 import ExpandableItem from '@enact/moonstone/ExpandableItem';
 import Button from '@enact/moonstone/Button';
-import IconButton from '@enact/ui/IconButton';
+import IconButton from '@enact/moonstone/IconButton';
 import './eventsList.css';
 
 const EventsList = (props) => {
@@ -13,7 +13,9 @@ const EventsList = (props) => {
 						<div className="event-body">
 							{ev.image.file_path != null ? <img src={ev.image.file_path} alt="ev.image.title"/> : ''}
 							<div className="event-desc">{ev.description}</div>	
-						</div>	
+						<IconButton onClick={()=>props.deleteEvent(ev,props.date,props.month,props.year)} className="delete-button" size="small">
+							trash
+						</IconButton>	</div>	
 					</ExpandableItem>
 				);
 			})}

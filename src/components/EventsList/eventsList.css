@@ -15,3 +15,7 @@ img{
     padding-left: 20px;
     display:inline-block;
 }
+
+.delete-button{
+    float: right;
+}
