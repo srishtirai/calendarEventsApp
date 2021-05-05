@@ -13,8 +13,9 @@ import Days from './Days';
 import CalendarHeader from './CalendarHeader';
 import EventsList from '../EventsList/EventsList';
 import Button from '@enact/moonstone/Button';
+// import { Popup } from '@enact/moonstone/Popup';
 
-const _kind = 'com.domain.app.service.familyeventplanner:1';
+const _kind = 'com.domain.app.service.familyeventplanner:4';
 
 export default class Calendar extends Component {
     state = {
@@ -26,7 +27,8 @@ export default class Calendar extends Component {
     	monthsData : [],
     	notification: false,
     	notificationMsg: '',
-    	dailogType: 'form'
+    	dailogType: 'form',
+		// confirmPopup: true
     };
 
     constructor (props) {
@@ -192,7 +194,6 @@ export default class Calendar extends Component {
 
     postObj = (obj) => {
     	obj['_kind'] = _kind;
-    	// console.log("Final object to PUT :: ", obj);
     	dbServices.putData(obj, (res) => {
     		if (res.returnValue) {
     			this.getDataFromDb();
@@ -217,6 +218,29 @@ export default class Calendar extends Component {
     		}, 3000);
     	});
     };
+
+	deleteEvent = (event, date, month, year) =>{
+		this.onDailogClose();
+		let query = generateQuery.findQuery({
+    		'year': year,
+    		'month': month.toString(),
+			'date': date
+    	});
+    	console.log('Delete Event Query here :: ', query);
+    	dbServices.findData(query, (res) => {
+    		console.log('Find data response :: ', res);
+			let ev ="";
+			for(var i in res.results){
+				console.log(res.results[i]);
+				if(res.results[i].event.title === event.title && res.results[i].event.description === event.description){
+					ev=res.results[i]._id;
+				}	
+			}
+			console.log(ev);
+			dbServices.deleteEvent(ev);
+			this.getDataFromDb();
+		});
+	}
 
     createNewEvent = () => {
     	this.setState({
@@ -291,6 +315,10 @@ export default class Calendar extends Component {
     									triggerNotification={this.triggerNotification}
 									/> :
 									<EventsList
+										deleteEvent={this.deleteEvent}
+										year={currentYear}
+										date={currentDate}
+										month={currentMonth}
     									createNewEvent={this.createNewEvent}
     									events={this.state.monthsData[currentYear][currentMonth.toString()][currentDate]}
     								/>
@@ -301,6 +329,17 @@ export default class Calendar extends Component {
     			<Notification open={this.state.notification}>
     				{this.state.notificationMsg}
 	</Notification>
+	{/* <Popup
+				 open={this.state.confirmPopup}
+				 onClose={() => {
+					this.onPopupClose();
+				}}
+				className="popup"				// className="popup"
+				>
+				<label>Delete the event</label>
+				<div><Button>OK</Button><Button>Cancel</Button></div>
+
+				</Popup> */}
 	</div>
 
     	);
