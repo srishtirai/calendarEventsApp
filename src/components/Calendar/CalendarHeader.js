@@ -1,4 +1,3 @@
-import React from 'react';
 import Icon from '@enact/moonstone/Icon';
 import Dropdown from '@enact/moonstone/Dropdown';
 import EditableIntegerPicker from '@enact/moonstone/EditableIntegerPicker';
@@ -8,7 +7,7 @@ const CalendarHeader = (props) => {
 		<tr className="calendar-header">
 			<td colSpan="1">
 				<Icon
-					onClick={(e) => {
+					onClick={() => {
 						props.prevMonth();
 					}}
 				>arrowsmallleft</Icon>
@@ -38,7 +37,7 @@ const CalendarHeader = (props) => {
 			</td>
 			<td colSpan="1" className="nav-month">
 				<Icon
-					onClick={(e) => {
+					onClick={() => {
 						props.nextMonth();
 					}}
 				>arrowsmallright</Icon>

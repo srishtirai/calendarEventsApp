@@ -61,12 +61,12 @@ export const dbServices = {
 			}
 		});
 	},
-	deleteEvent: (id) =>{
+	deleteEvent: (id) => {
 		return new LS2Request().send({
 			service: 'luna://com.webos.service.db',
 			method: 'del',
 			parameters: {
-			'ids' : [id]
+				'ids' : [id]
 			},
 			onSuccess: (res) => {
 				console.log('Success response :: ', res);

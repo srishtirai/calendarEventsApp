@@ -1,4 +1,3 @@
-import React from 'react';
 import LabeledIcon from '@enact/moonstone/LabeledIcon';
 
 const Days = (props) => {

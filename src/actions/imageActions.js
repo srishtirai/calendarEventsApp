@@ -24,33 +24,32 @@ const setImageListError = (message) => {
 
 const getImageList = ({uri}) => (dispatch) => {
 	dispatch(getImageListRequest());
-	if (uri == "DefaultImages") {
-		for (var x in mockImageList.imageList.results){
-			mockImageList.imageList.results[x].selected= false;
+	if (uri === 'DefaultImages') {
+		for (let x in mockImageList.imageList.results) {
+			mockImageList.imageList.results[x].selected = false;
 		}
 		dispatch(setImageListSuccess(mockImageList.imageList));
-	}
-	else{
-	return new LS2Request().send({
-		service: 'luna://com.webos.service.mediaindexer/',
-		method: 'getImageList',
-		parameters: {
-			uri: uri
-		},
-		onSuccess: (res) => {
-			const {returnValue, imageList} = res;
-			if (returnValue) {
-				for (var y in imageList.results){
-					imageList.results[y].selected= false;
+	} else {
+		return new LS2Request().send({
+			service: 'luna://com.webos.service.mediaindexer/',
+			method: 'getImageList',
+			parameters: {
+				uri: uri
+			},
+			onSuccess: (res) => {
+				const {returnValue, imageList} = res;
+				if (returnValue) {
+					for (let y in imageList.results) {
+						imageList.results[y].selected = false;
+					}
+					dispatch(setImageListSuccess(imageList));
 				}
-				dispatch(setImageListSuccess(imageList));
+			},
+			onFailure: (err) => {
+				dispatch(setImageListError(err.errorText));
 			}
-		},
-		onFailure: (err) => {
-			dispatch(setImageListError(err.errorText));
-		}
-	});
-}
+		});
+	}
 };
 
 export {

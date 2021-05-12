@@ -28,19 +28,19 @@ const getDeviceList = ({subscribe}) => (dispatch) => {
 	// 	return{};
 	// }
 	dispatch(getDeviceListRequest());
-		return new LS2Request().send({
-			service: 'luna://com.webos.service.mediaindexer/',
-			method: 'getDeviceList',
-			parameters: {
-				subscribe: subscribe
-			},
-			onSuccess: (res) => {
-				dispatch(setDeviceListSuccess(res.pluginList));
-			},
-			onFailure: (err) => {
-				dispatch(setDeviceListError(err.errorText));
-			}
-		});		
+	return new LS2Request().send({
+		service: 'luna://com.webos.service.mediaindexer/',
+		method: 'getDeviceList',
+		parameters: {
+			subscribe: subscribe
+		},
+		onSuccess: (res) => {
+			dispatch(setDeviceListSuccess(res.pluginList));
+		},
+		onFailure: (err) => {
+			dispatch(setDeviceListError(err.errorText));
+		}
+	});
 };
 
 

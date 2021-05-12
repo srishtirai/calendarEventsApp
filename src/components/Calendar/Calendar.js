@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
 import moment from 'moment';
 import Dialog from '@enact/moonstone/Dialog';
 import Scroller from '@enact/moonstone/Scroller';
@@ -13,7 +13,6 @@ import Days from './Days';
 import CalendarHeader from './CalendarHeader';
 import EventsList from '../EventsList/EventsList';
 import Button from '@enact/moonstone/Button';
-// import { Popup } from '@enact/moonstone/Popup';
 
 const _kind = 'com.domain.app.service.familyeventplanner:4';
 
@@ -27,8 +26,7 @@ export default class Calendar extends Component {
     	monthsData : [],
     	notification: false,
     	notificationMsg: '',
-    	dailogType: 'form',
-		// confirmPopup: true
+    	dailogType: 'form'
     };
 
     constructor (props) {
@@ -46,8 +44,8 @@ export default class Calendar extends Component {
     			this.getDataFromDb();
     		}
     	});
-		// let monthsData = sampleData;
-		// this.setState({monthsData});
+    	// let monthsData = sampleData;
+    	// this.setState({monthsData});
     }
 
     getDataFromDb = () => {
@@ -131,22 +129,23 @@ export default class Calendar extends Component {
     SelectList = (props) => {
     	let popup = props.data.map((data) => {
     		return (
-    			<div key={data}>
-    				<a
-    					href="#" onClick={(e) => {
-    					this.onSelectChange(e, data);
-    				}}
-	>
-    					{data}
-	</a>
-	</div>
-    		);
-    	});
+				<div key={data}>
+					<a
+						href="#" 
+						onClick={(e) => {
+							this.onSelectChange(e, data);
+						}}
+					>
+						{data}
+					</a>
+				</div>
+			);
+		});
 
     	return (
-    		<div className="month-popup">
-    			{popup}
-	</div>
+			<div className="month-popup">
+				{popup}
+			</div>
     	);
     };
 
@@ -180,168 +179,157 @@ export default class Calendar extends Component {
     		dailog: true,
     		dailogSubTitle: dailogSubTitle
     	});
+		this.props.onDayClick && this.props.onDayClick(e, day);
+	};
 
+	onDailogClose = () => {
+		this.setState({
+			dailog: false,
+			dailogType: 'form'
+		});
+	};
 
-    	this.props.onDayClick && this.props.onDayClick(e, day);
-    };
+	postObj = (obj) => {
+		obj['_kind'] = _kind;
+		dbServices.putData(obj, (res) => {
+			if (res.returnValue) {
+				this.getDataFromDb();
+			}
+		});
+		this.setState({
+			dailog: false
+		});
+	};
 
-    onDailogClose = () => {
-    	this.setState({
-    		dailog: false,
-    		dailogType: 'form'
-    	});
-    };
+	triggerNotification = (msg) => {
+		let self = this;
+		this.setState({
+			notification: true,
+			notificationMsg: msg.message
+		}, () => {
+			setTimeout(() => {
+				self.setState({
+					notification: false,
+					notificationMsg: ''
+				});
+			}, 3000);
+		});
+	};
 
-    postObj = (obj) => {
-    	obj['_kind'] = _kind;
-    	dbServices.putData(obj, (res) => {
-    		if (res.returnValue) {
-    			this.getDataFromDb();
-    		}
-    	});
-    	this.setState({
-    		dailog: false
-    	});
-    };
-
-    triggerNotification = (msg) => {
-    	let self = this;
-    	this.setState({
-    		notification: true,
-    		notificationMsg: msg.message
-    	}, () => {
-    		setTimeout(() => {
-    			self.setState({
-    				notification: false,
-    				notificationMsg: ''
-    			});
-    		}, 3000);
-    	});
-    };
-
-	deleteEvent = (event, date, month, year) =>{
+	deleteEvent = (event, date, month, year) => {
 		this.onDailogClose();
 		let query = generateQuery.findQuery({
-    		'year': year,
-    		'month': month.toString(),
+			'year': year,
+			'month': month.toString(),
 			'date': date
-    	});
-    	console.log('Delete Event Query here :: ', query);
-    	dbServices.findData(query, (res) => {
-    		console.log('Find data response :: ', res);
-			let ev ="";
-			for(var i in res.results){
+		});
+		console.log('Delete Event Query here :: ', query);
+		dbServices.findData(query, (res) => {
+			console.log('Find data response :: ', res);
+			let ev = '';
+			for (let i in res.results) {
 				console.log(res.results[i]);
-				if(res.results[i].event.title === event.title && res.results[i].event.description === event.description){
-					ev=res.results[i]._id;
-				}	
+				if (res.results[i].event.title === event.title && res.results[i].event.description === event.description) {
+					ev = res.results[i]._id;
+				}
 			}
 			console.log(ev);
 			dbServices.deleteEvent(ev);
 			this.getDataFromDb();
 		});
-	}
+	};
 
-    createNewEvent = () => {
-    	this.setState({
-    		dailogType: 'form',
-    		dailog: true
-    	});
-    };
+	createNewEvent = () => {
+		this.setState({
+			dailogType: 'form',
+			dailog: true
+		});
+	};
 
-    render () {
-    	// Map the weekdays i.e Sun, Mon, Tue etc as <td>
-    	let weekdays = this.weekdaysShort.map((day) => {
-    		return (
-    			<td key={day} className="week-day">{day}</td>
-    		);
-    	});
+	render () {
+		// Map the weekdays i.e Sun, Mon, Tue etc as <td>
+		let weekdays = this.weekdaysShort.map((day) => {
+			return (
+				<td key={day} className="week-day">{day}</td>
+			);
+		});
 
-    	let formatedDate = this.state.selectedDay ? this.state.selectedDay + '-' + this.month() + '-' + this.year() : this.currentDate() + '-' + this.month() + '-' + this.year();
-    	let currentSelectedDate = new Date(formatedDate);
-    	let currentMonth = this.months.indexOf(this.month()) + 1;
-    	let currentYear = this.year().toString();
-    	let currentDate = this.state.selectedDay && this.state.selectedDay.toString();
-    	return (
-    		<div className="calendar-container" style={this.style}>
-    			<table className="calendar">
-    				<thead>
-    					<CalendarHeader
-    						prevMonth={this.prevMonth}
-    						months={this.months}
-    						month={this.month}
-    						onSelectChange={this.onSelectChange}
-    						year={this.year}
-    						onYearChange={this.onYearChange}
-    						nextMonth={this.nextMonth}
+		let formatedDate = this.state.selectedDay ? this.state.selectedDay + '-' + this.month() + '-' + this.year() : this.currentDate() + '-' + this.month() + '-' + this.year();
+		let currentSelectedDate = new Date(formatedDate);
+		let currentMonth = this.months.indexOf(this.month()) + 1;
+		let currentYear = this.year().toString();
+		let currentDate = this.state.selectedDay && this.state.selectedDay.toString();
+		return (
+			<div className="calendar-container" style={this.style}>
+				<table className="calendar">
+					<thead>
+						<CalendarHeader
+							prevMonth={this.prevMonth}
+							months={this.months}
+							month={this.month}
+							onSelectChange={this.onSelectChange}
+							year={this.year}
+							onYearChange={this.onYearChange}
+							nextMonth={this.nextMonth}
 						/>
 					</thead>
-    				<tbody>
-    					<tr className="week-day-nav">
-    						{weekdays}
+					<tbody>
+						<tr className="week-day-nav">
+							{weekdays}
 						</tr>
-    					<Days
-    						firstDayOfMonth={this.firstDayOfMonth}
-    						daysInMonth={this.daysInMonth}
-    						currentDay={this.currentDay}
-    						onDayClick={this.onDayClick}
-    						year={this.year()}
-    						month={this.months.indexOf(this.month()) + 1}
-    						monthsData={this.state.monthsData[this.year()]}
-	/>
-	</tbody>
-	</table>
-    			<Button
-    				className="create-new-btn" onClick={() => {
-    				this.createNewEvent();
-    			}}
-	>Create New Event</Button>
-    			<Dialog
-    				open={this.state.dailog}
-    				onClose={() => {
-    					this.onDailogClose();
-    				}}
-    				showCloseButton
-    				title={formatedDate}
-    				titleBelow={this.state.dailogSubTitle}
-	>
-    				<Scroller>
-    					<div style={{height: '450px'}}>
-    						{
-    							this.state.dailogType === 'form' ?
-    								<CreateForm
-    									currentSelectedDate={currentSelectedDate}
-    									postObj={this.postObj}
-    									triggerNotification={this.triggerNotification}
+						<Days
+							firstDayOfMonth={this.firstDayOfMonth}
+							daysInMonth={this.daysInMonth}
+							currentDay={this.currentDay}
+							onDayClick={this.onDayClick}
+							year={this.year()}
+							month={this.months.indexOf(this.month()) + 1}
+							monthsData={this.state.monthsData[this.year()]}
+						/>
+					</tbody>
+				</table>
+				<Button
+					className="create-new-btn"
+					onClick={() => {
+						this.createNewEvent();
+					}}
+				>
+					Create New Event
+				</Button>
+				<Dialog
+					open={this.state.dailog}
+					onClose={() => {
+						this.onDailogClose();
+					}}
+					showCloseButton
+					title={formatedDate}
+					titleBelow={this.state.dailogSubTitle}
+				>
+					<Scroller>
+						<div style={{height: '450px'}}>
+							{
+								this.state.dailogType === 'form' ?
+									<CreateForm
+										currentSelectedDate={currentSelectedDate}
+										postObj={this.postObj}
+										triggerNotification={this.triggerNotification}
 									/> :
 									<EventsList
 										deleteEvent={this.deleteEvent}
 										year={currentYear}
 										date={currentDate}
 										month={currentMonth}
-    									createNewEvent={this.createNewEvent}
-    									events={this.state.monthsData[currentYear][currentMonth.toString()][currentDate]}
-    								/>
-    						}
-	</div>
-	</Scroller>
-	</Dialog>
-    			<Notification open={this.state.notification}>
-    				{this.state.notificationMsg}
-	</Notification>
-	{/* <Popup
-				 open={this.state.confirmPopup}
-				 onClose={() => {
-					this.onPopupClose();
-				}}
-				className="popup"				// className="popup"
-				>
-				<label>Delete the event</label>
-				<div><Button>OK</Button><Button>Cancel</Button></div>
-
-				</Popup> */}
-	</div>
-
-    	);
-    }
+										createNewEvent={this.createNewEvent}
+										events={this.state.monthsData[currentYear][currentMonth.toString()][currentDate]}
+									/>
+							}
+						</div>
+					</Scroller>
+				</Dialog>
+				<Notification open={this.state.notification}>
+					{this.state.notificationMsg}
+				</Notification>
+			</div>
+		);
+	}
 }
