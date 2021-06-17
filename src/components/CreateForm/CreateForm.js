@@ -82,7 +82,7 @@ const CreateForm = ({getListDevice, getListImage, imageList, deviceList, current
 					'title' : eventTitle,
 					'description' : eventDesc
 				};
-				if (pickedImage) {
+				if (pickedImage!=null) {
 					obj['image'] = imageList.results[pickedImage];
 				} else {
 					obj['image'] = {};
