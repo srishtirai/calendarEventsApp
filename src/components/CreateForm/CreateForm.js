@@ -9,7 +9,7 @@ import {getImageList} from '../../actions/imageActions';
 import {getDeviceList} from '../../actions/deviceActions';
 import './createForm.css';
 import ImageSelection from './ImageSelection';
-require.context('../../../assets/samplePhoto/', false, /\.jpg$/);
+require.context('../../../assets/samplePhoto/', false, /\.png$/);
 
 const CreateForm = ({getListDevice, getListImage, imageList, deviceList, currentSelectedDate, postObj, triggerNotification}) => {
 

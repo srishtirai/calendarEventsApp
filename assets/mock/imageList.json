@@ -2,222 +2,146 @@
     "imageList": {
        "results": [
          {
-            "width": 1024,
-            "last_modified_date": "Fri Aug 14 03:54:08 2020 GMT",
-            "uri": "msc://B5E0-BBB2/tmp/usb/sdg/sdg1/image/SampleImage1.jpg",
-            "title": "SampleImage1",
-            "file_size": 197377,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets/samplePhoto/Almond%20Blossoms.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Wed Jul 22 09:04:16 2020 GMT",
-            "uri": "msc://D94A-BE4D/tmp/usb/sdh/sdh1/SampleImage2.jpg",
-            "title": "SampleImage2",
-            "file_size": 199429,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Almond Blossoms.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Fri Aug 14 03:54:08 2020 GMT",
-            "uri": "msc://B5E0-BBB2/tmp/usb/sdg/sdg1/image/SampleImage1.jpg",
-            "title": "SampleImage1",
-            "file_size": 197377,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Slovenia Bled.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Wed Jul 22 09:04:16 2020 GMT",
-            "uri": "msc://D94A-BE4D/tmp/usb/sdh/sdh1/SampleImage2.jpg",
-            "title": "SampleImage2",
-            "file_size": 199429,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Pine Trees in Fog.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Fri Aug 14 03:54:08 2020 GMT",
-            "uri": "msc://B5E0-BBB2/tmp/usb/sdg/sdg1/image/SampleImage1.jpg",
-            "title": "SampleImage1",
-            "file_size": 197377,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Dresden From the Right Bank of the Elbe Below the Augustus Bridge.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Wed Jul 22 09:04:16 2020 GMT",
-            "uri": "msc://D94A-BE4D/tmp/usb/sdh/sdh1/SampleImage2.jpg",
-            "title": "SampleImage2",
-            "file_size": 199429,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Irises.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Fri Aug 14 03:54:08 2020 GMT",
-            "uri": "msc://B5E0-BBB2/tmp/usb/sdg/sdg1/image/SampleImage1.jpg",
-            "title": "SampleImage1",
-            "file_size": 197377,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Austria Hallstatt.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Wed Jul 22 09:04:16 2020 GMT",
-            "uri": "msc://D94A-BE4D/tmp/usb/sdh/sdh1/SampleImage2.jpg",
-            "title": "SampleImage2",
-            "file_size": 199429,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Almond Blossoms.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Fri Aug 14 03:54:08 2020 GMT",
-            "uri": "msc://B5E0-BBB2/tmp/usb/sdg/sdg1/image/SampleImage1.jpg",
-            "title": "SampleImage1",
-            "file_size": 197377,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Slovenia Bled.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Wed Jul 22 09:04:16 2020 GMT",
-            "uri": "msc://D94A-BE4D/tmp/usb/sdh/sdh1/SampleImage2.jpg",
-            "title": "SampleImage2",
-            "file_size": 199429,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Pine Trees in Fog.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Fri Aug 14 03:54:08 2020 GMT",
-            "uri": "msc://B5E0-BBB2/tmp/usb/sdg/sdg1/image/SampleImage1.jpg",
-            "title": "SampleImage1",
-            "file_size": 197377,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Dresden From the Right Bank of the Elbe Below the Augustus Bridge.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Wed Jul 22 09:04:16 2020 GMT",
-            "uri": "msc://D94A-BE4D/tmp/usb/sdh/sdh1/SampleImage2.jpg",
-            "title": "SampleImage2",
-            "file_size": 199429,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Irises.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Fri Aug 14 03:54:08 2020 GMT",
-            "uri": "msc://B5E0-BBB2/tmp/usb/sdg/sdg1/image/SampleImage1.jpg",
-            "title": "SampleImage1",
-            "file_size": 197377,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Austria Hallstatt.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Wed Jul 22 09:04:16 2020 GMT",
-            "uri": "msc://D94A-BE4D/tmp/usb/sdh/sdh1/SampleImage2.jpg",
-            "title": "SampleImage2",
-            "file_size": 199429,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Almond Blossoms.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Fri Aug 14 03:54:08 2020 GMT",
-            "uri": "msc://B5E0-BBB2/tmp/usb/sdg/sdg1/image/SampleImage1.jpg",
-            "title": "SampleImage1",
-            "file_size": 197377,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Slovenia Bled.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Wed Jul 22 09:04:16 2020 GMT",
-            "uri": "msc://D94A-BE4D/tmp/usb/sdh/sdh1/SampleImage2.jpg",
-            "title": "SampleImage2",
-            "file_size": 199429,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Pine Trees in Fog.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Fri Aug 14 03:54:08 2020 GMT",
-            "uri": "msc://B5E0-BBB2/tmp/usb/sdg/sdg1/image/SampleImage1.jpg",
-            "title": "SampleImage1",
-            "file_size": 197377,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Dresden From the Right Bank of the Elbe Below the Augustus Bridge.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Wed Jul 22 09:04:16 2020 GMT",
-            "uri": "msc://D94A-BE4D/tmp/usb/sdh/sdh1/SampleImage2.jpg",
-            "title": "SampleImage2",
-            "file_size": 199429,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Irises.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Fri Aug 14 03:54:08 2020 GMT",
-            "uri": "msc://B5E0-BBB2/tmp/usb/sdg/sdg1/image/SampleImage1.jpg",
-            "title": "SampleImage1",
-            "file_size": 197377,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Austria Hallstatt.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Wed Jul 22 09:04:16 2020 GMT",
-            "uri": "msc://D94A-BE4D/tmp/usb/sdh/sdh1/SampleImage2.jpg",
-            "title": "SampleImage2",
-            "file_size": 199429,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Almond Blossoms.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Fri Aug 14 03:54:08 2020 GMT",
-            "uri": "msc://B5E0-BBB2/tmp/usb/sdg/sdg1/image/SampleImage1.jpg",
-            "title": "SampleImage1",
-            "file_size": 197377,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Slovenia Bled.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Wed Jul 22 09:04:16 2020 GMT",
-            "uri": "msc://D94A-BE4D/tmp/usb/sdh/sdh1/SampleImage2.jpg",
-            "title": "SampleImage2",
-            "file_size": 199429,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Pine Trees in Fog.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Fri Aug 14 03:54:08 2020 GMT",
-            "uri": "msc://B5E0-BBB2/tmp/usb/sdg/sdg1/image/SampleImage1.jpg",
-            "title": "SampleImage1",
-            "file_size": 197377,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Dresden From the Right Bank of the Elbe Below the Augustus Bridge.jpg"
-         },
-         {
-            "width": 1024,
-            "last_modified_date": "Wed Jul 22 09:04:16 2020 GMT",
-            "uri": "msc://D94A-BE4D/tmp/usb/sdh/sdh1/SampleImage2.jpg",
-            "title": "SampleImage2",
-            "file_size": 199429,
-            "height": 768,
-            "file_path": "file:///media/developer/apps/usr/palm/applications/com.domain.app.familyeventplanner/assets\/samplePhoto\/Irises.jpg"
-         }
+            "width": 96,
+            "last_modified_date": "Wed Jun  9 09:03:14 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/diya-lamp-emoji.png",
+            "height": 96,
+            "file_size": 6631,
+            "title": "diya-lamp-emoji.png",
+            "uri": "assets/samplePhoto/diya-lamp-emoji.png"
+        },
+        {
+            "width": 200,
+            "last_modified_date": "Wed Jun  9 09:03:12 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/birthday-boy.png",
+            "height": 200,
+            "file_size": 14930,
+            "title": "birthday-boy.png",
+            "uri": "assets/samplePhoto/birthday-boy.png"
+        },
+        {
+            "width": 128,
+            "last_modified_date": "Wed Jun  9 09:03:10 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/wedding-gift.png",
+            "height": 128,
+            "file_size": 4293,
+            "title": "wedding-gift.png",
+            "uri": "assets/samplePhoto/wedding-gift.png"
+        },
+        {
+            "width": 200,
+            "last_modified_date": "Wed Jun  9 09:03:12 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/birthday-girl.png",
+            "height": 200,
+            "file_size": 16432,
+            "title": "birthday-girl.png",
+            "uri": "assets/samplePhoto/birthday-girl.png"
+        },
+        {
+            "width": 256,
+            "last_modified_date": "Wed Jun  9 09:03:18 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/route.png",
+            "height": 256,
+            "file_size": 10952,
+            "title": "route.png",
+            "uri": "assets/samplePhoto/route.png"
+        },
+        {
+            "width": 100,
+            "last_modified_date": "Wed Jun  9 09:03:16 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/health-calendar.png",
+            "height": 100,
+            "file_size": 1556,
+            "title": "health-calendar.png",
+            "uri": "assets/samplePhoto/health-calendar.png"
+        },
+        {
+            "width": 256,
+            "last_modified_date": "Wed Jun  9 09:03:17 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/new-year.png",
+            "height": 256,
+            "file_size": 7409,
+            "title": "new-year.png",
+            "uri": "assets/samplePhoto/new-year.png"
+        },
+        {
+            "width": 96,
+            "last_modified_date": "Wed Jun  9 09:03:15 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/-emoji-christmas-tree.png",
+            "height": 96,
+            "file_size": 6197,
+            "title": "-emoji-christmas-tree.png",
+            "uri": "assets/samplePhoto/-emoji-christmas-tree.png"
+        },
+        {
+            "width": 96,
+            "last_modified_date": "Wed Jun  9 09:03:13 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/camping.png",
+            "height": 96,
+            "file_size": 5378,
+            "title": "camping.png",
+            "uri": "assets/samplePhoto/camping.png"
+        },
+        {
+            "width": 100,
+            "last_modified_date": "Wed Jun  9 09:03:17 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/ramadan.png",
+            "height": 100,
+            "file_size": 2132,
+            "title": "ramadan.png",
+            "uri": "assets/samplePhoto/ramadan.png"
+        },
+        {
+            "width": 96,
+            "last_modified_date": "Wed Jun  9 09:03:18 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/royal-tent.png",
+            "height": 96,
+            "file_size": 1898,
+            "title": "royal-tent.png",
+            "uri": "assets/samplePhoto/royal-tent.png"
+        },
+        {
+            "width": 256,
+            "last_modified_date": "Wed Jun  9 09:03:16 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/engagement-ring.png",
+            "height": 256,
+            "file_size": 9172,
+            "title": "engagement-ring.png",
+            "uri": "assets/samplePhoto/engagement-ring.png"
+        },
+        {
+            "width": 200,
+            "last_modified_date": "Wed Jun  9 09:03:11 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/birthday.png",
+            "height": 200,
+            "file_size": 8940,
+            "title": "birthday.png",
+            "uri": "assets/samplePhoto/birthday.png"
+        },
+        {
+            "width": 96,
+            "last_modified_date": "Wed Jun  9 09:03:13 2021 GMT",
+            "dirty": false,
+            "file_path": "assets/samplePhoto/conference-foreground.png",
+            "height": 96,
+            "file_size": 2953,
+            "title": "conference-foreground.png",
+            "uri": "assets/samplePhoto/conference-foreground.png"
+        }
       ],
-       "count": 24
+       "count": 14
     }
  }

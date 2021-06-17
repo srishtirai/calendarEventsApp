@@ -1,6 +1,6 @@
 {
 	"id": "com.domain.app.familyeventplanner",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"vendor": "LGSI",
 	"type": "web",
 	"main": "index.html",
